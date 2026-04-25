@@ -1,6 +1,3 @@
-*
-!*.*
-
 # Prerequisites
 *.d
 
@@ -43,3 +40,5 @@
 # debug information files
 *.dwo
 
+part1
+part2
