@@ -59,4 +59,6 @@ int main() {
 	std::string lcs = LCS(X, Y);
 	std::cout << "LCS length " << lcs.size() << "\n";
 	std::cout << "LCS: " << lcs << "\n";
+
+	return 0;
 }
