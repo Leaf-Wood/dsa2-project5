@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <fstream>
 
 std::string LCS(const std::string &X, const std::string& Y) {
 	int m = X.size();
@@ -43,8 +44,19 @@ std::string LCS(const std::string &X, const std::string& Y) {
 
 
 int main() {
-	std::string X = "ACATA";
-	std::string Y = "CAT";
-	
-	std::cout << LCS(X, Y) << "\n";
+	std::ifstream file("twoStrings.txt");
+
+	std::string X, Y;
+
+	if(file.is_open()) {
+		std::getline(file, X);
+		std::getline(file, Y);
+		file.close();
+	}
+	std::cout << "String 1 Length: " << X.size() << "\n";
+	std::cout << "String 2 Length:  " << Y.size() << "\n";
+
+	std::string lcs = LCS(X, Y);
+	std::cout << "LCS length " << lcs.size() << "\n";
+	std::cout << "LCS: " << lcs << "\n";
 }
